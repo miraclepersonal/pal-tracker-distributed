@@ -1,1 +1,45 @@
 pal-tracker-distributed codebase
+
+CF_API_URL -> api.sys.evans.pal.pivotal.io
+
+mv ~/Downloads/pal-tracker.zip .
+unzip pal-tracker.zip
+
+Set your username:  git config credential.https://github.com.username <your github user name>
+Set to cache your credentials: git config credential.helper store
+push to your pal-tracker repository git push origin main --tag
+
+Containers vs VMs https://youtu.be/cjXI-yxqGTI
+
+https://docs.google.com/presentation/d/1tvXFgvV27bGYRVB3eqUIA8CcqdwjQc_HLt-0k-LrK0Y/edit#slide=id.g7ea4a9dfdf_0_1813
+Cloud Foundry OSS: https://www.cloudfoundry.org/
+
+
+Application Continuum Site: https://www.appcontinuum.io/
+Git fast forward instructions: https://deploy-preview-1193--tanzu-dev-portal.netlify.app/developer/outcomes/cloud-native-development-in-practice/intro/#fast-forward
+Gti primary: https://deploy-preview-1193--tanzu-dev-portal.netlify.app/developer/outcomes/cloud-native-development-in-practice/intro/#git-primer
+Temporary Course Archive: https://deploy-preview-1193--tanzu-dev-portal.netlify.app/developer/outcomes/cloud-native-development-in-practice/
+https://github.com/vmware-tanzu/tanzu-dev-portal
+
+https://courses.education.pivotal.io/c/349803963/
+https://tanzu.vmware.com/developer/
+https://courses.education.pivotal.io/
+
+Some links you can review offline about OIDC and Oauth 2 security:
+https://www.youtube.com/watch?v=5th6CSQTdpM&ab_channel=SpringDeveloper
+https://www.youtube.com/watch?v=996OiexHze0&ab_channel=OktaDev
+
+If any doubt about the REGISTRATION_SERVER_ENDPOINT check here for a hint:
+https://docs.google.com/presentation/d/1IFXGBBBHKGJcS9mEWHaPodUXYq9hVEjiUXPSv6MTWyg/present?slide=id.ge9cac6b4e4_0_5
+
+For folks wanting to use postman, you can install on the remote desktop like follows:
+sudo snap install postman --candidate
+You can get the pre-authored collections and environments in the pal-tracker-distributed project:
+git cherry-pick postman
+To set your PCF environment (before importing collections to postman):
+sed -i 's/{your-initials}.{your-domain}/<your initials>.apps.evans.pal.pivotal.io/g' scripts/postman/pal-tracker-distributed-pcf.postman_environment.json
+
+Bill Kable:
+TAS Autoscaler links:
+https://docs.pivotal.io/application-service/2-9/appsman-services/autoscaler/about-app-autoscaler.html
+You can download the autoscaler for today here: https://github.com/billkable/patch-cnd-remote-desktop/blob/main/autoscaler-for-pcf-cliplugin-linux64-binary-2.0.233
